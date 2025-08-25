@@ -42,7 +42,7 @@ docker run -d --name smtp_relay -p "25:25"  \
        -v .:/secrets \
        -e SMTP_SERVER=smtp.bar.com \
        -e SMTP_USERNAME=foo@bar.com \
-       -e  SMTP_PASSWORD_FILE=/secrets/.mypass \
+       -e SMTP_PASSWORD_FILE=/secrets/.mypass \
        -e SERVER_HOSTNAME=helpdesk.mycompany.com \
        thiagobruch/smtp_relay
 ```
