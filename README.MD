@@ -28,10 +28,19 @@
 
 To use this container from anywhere, the 25 port or the one specified by SMTP_PORT needs to be exposed to the docker host server:
 ```
-docker run -d --name postfix -p "25:25"  \
+docker run -d --name smtp_relay -p "25:25"  \
        -e SMTP_SERVER=smtp.bar.com \
        -e SMTP_USERNAME=foo@bar.com \
        -e SMTP_PASSWORD=XXXXXXXX \
        -e SERVER_HOSTNAME=helpdesk.mycompany.com \
        thiagobruch/smtp_relay
 ```
+Using Password file instead of the password in clear text in the docker command:
+docker run -d --name smtp_relay -p "25:25"  \
+       -v .:/secrets \
+       -e SMTP_SERVER=smtp.bar.com \
+       -e SMTP_USERNAME=foo@bar.com \
+       -e  SMTP_PASSWORD_FILE=/secrets/.mypass \
+       -e SERVER_HOSTNAME=helpdesk.mycompany.com \
+       thiagobruch/smtp_relay
+
