@@ -36,6 +36,7 @@ docker run -d --name smtp_relay -p "25:25"  \
        thiagobruch/smtp_relay
 ```
 Using Password file instead of the password in clear text in the docker command:
+```
 docker run -d --name smtp_relay -p "25:25"  \
        -v .:/secrets \
        -e SMTP_SERVER=smtp.bar.com \
@@ -43,4 +44,4 @@ docker run -d --name smtp_relay -p "25:25"  \
        -e  SMTP_PASSWORD_FILE=/secrets/.mypass \
        -e SERVER_HOSTNAME=helpdesk.mycompany.com \
        thiagobruch/smtp_relay
-
+```
