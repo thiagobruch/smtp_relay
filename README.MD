@@ -1,8 +1,8 @@
 Simple Postfix SMTP TLS relay docker⁠ alpine based image with no local authentication enabled (to be run in a secure LAN).
 
-## ** This is based on the image from juanluisbaptiste/postfix
+** This is based on the image from juanluisbaptiste/postfix
 
-#The following env variables need to be passed to the container:
+## The following env variables need to be passed to the container:
 
 SMTP_SERVER: Server address of the SMTP server to use.
 SMTP_PORT: (Optional, Default value: 587) Port address of the SMTP server to use.
@@ -10,7 +10,7 @@ SMTP_USERNAME: (Optional) Username to authenticate with.
 SMTP_PASSWORD: (Mandatory if SMTP_USERNAME is set) Password of the SMTP user. If SMTP_PASSWORD_FILE is set, not needed.
 SERVER_HOSTNAME: Server hostname for the Postfix container. Emails will appear to come from the hostname's domain.
 
-#The following env variable(s) are optional.
+## The following env variable(s) are optional.
 
 SMTP_HEADER_TAG: This will add a header for tracking messages upstream. Helpful for spam filters. Will appear as "RelayTag: ${SMTP_HEADER_TAG}" in the email headers.
 
