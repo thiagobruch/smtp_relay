@@ -10,7 +10,6 @@
 | SMTP_USERNAME | (Optional) Username to authenticate with.|
 | SMTP_PASSWORD | (Mandatory if SMTP_USERNAME is set) Password of the SMTP user. If SMTP_PASSWORD_FILE is set, not needed.|
 | SERVER_HOSTNAME | Server hostname for the Postfix container. Emails will appear to come from the hostname's domain.|
-| ------------- | ------------- |
 
 ## The following env variable(s) are optional.
 | Variable  | Notes |
