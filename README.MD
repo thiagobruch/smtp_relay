@@ -36,6 +36,7 @@ docker run -d --name smtp_relay -p "25:25"  \
        thiagobruch/smtp_relay
 ```
 Using Password file instead of the password in clear text in the docker command:
+Create a file called .mypass with the password and set the chmod to 600 (-rw-------)
 ```
 docker run -d --name smtp_relay -p "25:25"  \
        -v .:/secrets \
