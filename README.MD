@@ -16,8 +16,7 @@
 | Variable  | Notes |
 | ------------- | ------------- |
 | SMTP_HEADER_TAG | This will add a header for tracking messages upstream. Helpful for spam filters. Will appear as "RelayTag: ${SMTP_HEADER_TAG}" in the email headers.|
-| SMTP_NETWORKS | Setting this will allow you to add additional, comma seperated, subnets to use the relay. Used like -e SMTP_NETWORKS='xxx.xxx.xxx.xxx/xx,xxx.xxx.xxx.xxx/xx'. 
-NOTE: This option only works when running the container with no network isolation using Docker's host mode⁠, so the container can interact with the Docker host's networks. This means that you will be running a SMTP relay with no authentication in your network. Use this option with caution, and have in mind that it may be removed in the future.|
+| SMTP_NETWORKS | Setting this will allow you to add additional, comma seperated, subnets to use the relay. Used like -e SMTP_NETWORKS='xxx.xxx.xxx.xxx/xx,xxx.xxx.xxx.xxx/xx'. <BR><BR> NOTE: This option only works when running the container with no network isolation using Docker's host mode⁠, so the container can interact with the Docker host's networks. This means that you will be running a SMTP relay with no authentication in your network. Use this option with caution, and have in mind that it may be removed in the future.|
 | SMTP_PASSWORD_FILE | Setting this to a mounted file containing the password, to avoid passwords in env variables. Used like -e SMTP_PASSWORD_FILE=/secrets/smtp_password -v $(pwd)/secrets/:/secrets/|
 | SMTP_USERNAME_FILE | Setting this to a mounted file containing the username, to avoid usernames in env variables. Used like -e SMTP_USERNAME_FILE=/secrets/smtp_username -v $(pwd)/secrets/:/secrets/|
 | ALWAYS_ADD_MISSING_HEADERS | This is related to the always_add_missing_headers⁠ Postfix option (default: no). If set to yes, Postfix will always add missing headers among From:, To:, Date: or Message-ID:.|
