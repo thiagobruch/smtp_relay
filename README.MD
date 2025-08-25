@@ -3,7 +3,6 @@
 ** This is based on the image from juanluisbaptiste/postfix
 
 ## The following env variables need to be passed to the container:
-
 | Variable  | Notes |
 | ------------- | ------------- |
 | SMTP_SERVER | Server address of the SMTP server to use.|
